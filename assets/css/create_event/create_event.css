@@ -21,6 +21,8 @@
 
 /* HEADER */
 header{
+    background-color: white;
+
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
     font-weight: 700;
@@ -120,11 +122,14 @@ input[type=image]{
 
 section#event_date{
     background: url('../../img/background_sectionDate.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    min-height: 540px;
 
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    align-content: space-around;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -132,3 +137,17 @@ section#event_date{
     text-align: start;
 
 }
+section#event_date h1{
+    align-self: flex-start;
+}
+section#event_date form{
+    display: grid;
+    grid-template-areas: "input1 . input2" ". . ." "input3 . input4";
+    grid-template-rows: auto 20% auto;
+    grid-template-columns: auto 20% auto;
+}
+section#event_date form input:nth-child(1){grid-area: input1;}
+section#event_date form input:nth-child(2){grid-area: input2;}
+section#event_date form input:nth-child(3){grid-area: input3;}
+section#event_date form input:nth-child(4){grid-area: input4;}
+section#event_date form{}
