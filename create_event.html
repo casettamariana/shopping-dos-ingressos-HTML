@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping dos Ingressos</title>
 
+    <script src="./node_modules/feather-icons/dist/feather.min.js"></script>
+    <link rel="shortcut icon" href="./assets/img/favIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/create_event/global.css">
 </head>
 <body>
-    <header>
-        <div class="title_page">Criar Evento</div>
-        <button>Publicar Evento</button>
-    </header>
-    <section id="name_event">
-        <h1>1. Nome do Evento</h1>
+    <section id="focus_firstPage" class="content">
+        <header>
+            <div class="title_page">Criar Evento</div>
+            <img src="./assets/img/logo-100x100.png" alt="Logo Shopping dos Ingressos">
+            <button>Publicar Evento</button>
+        </header>
+        
+        <section id="name_event">
+            <h1>1. Nome do Evento</h1>
+
+            <form action="" method="post">
+                <label htmlFor="name">Nome do Evento:</label>
+                <input type="text" name="nameEvent" id="name">
+                <i data-feather="check-circle"></i>
+
+                <label htmlFor="img_event">Imagem de Divulgação do Evento:</label>
+                <input type="image" src="./assets/img/upload-cloud.svg" alt="Adicione a imagem do seu evento" id="img_event"/>
+            </form>
+        </section>
     </section>
+    <section id="event_date" class="content">
+        <h1>2. Data do Evento</h1>
+
+        <form action="" method="post">
+
+        </form>
+    </section>
+
+
+
+    <script>
+        feather.replace()
+      </script>
 </body>
 </html>

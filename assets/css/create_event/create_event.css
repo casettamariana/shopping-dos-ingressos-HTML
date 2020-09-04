@@ -2,6 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
+/* Fist Page */
+#focus_firstPage{
+    width: 100vw;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+
+
 /* HEADER */
 header{
     font-family: 'Roboto', sans-serif;
@@ -20,6 +37,7 @@ header{
 
     width: 100vw;
     height: max-content;
+    min-height: 10vh;
     
     border: none;
     border-bottom: 2px solid #D9D9D9;
@@ -28,6 +46,9 @@ header{
 }
 header .title_page{
     margin-left: 2%;
+}
+header img{
+    width: 50px;
 }
 
 header button{
@@ -53,5 +74,61 @@ header button{
 
 /* Section 1 - Nome do evento */
 section#name_event{
+    width: 45VW;
+    text-align: start;
+}
+section#name_event form{
     display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-content: start;
+    justify-items: center;
+}
+
+section#name_event form label{
+    align-self: flex-start;
+    margin: 5% 0 0 0;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+}
+input[type=text]:focus{
+    border: none;
+}
+
+form i{
+    align-self: flex-end;
+}
+
+
+input[type=image]{
+    border: 1.5px ridge #333;
+    border-radius: 15px;
+    padding: 15% 40%;
+    margin-top: 5%;
+}
+
+
+
+/* SECTION DATE */
+
+section#event_date{
+    background: url('../../img/background_sectionDate.svg');
+
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    text-align: start;
+
 }
