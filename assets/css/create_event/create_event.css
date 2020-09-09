@@ -1,153 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-
-/* Fist Page */
-#focus_firstPage{
-    width: 100vw;
-    height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+#content {
+  width: 100vw;
+  height: 100%;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: stretch;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    align-items: center;
-    justify-content: space-around;
-    justify-items: center;
+#content > section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  text-align: start;
 }
 
-
+#content > section h1, #content > section p, #content > section form {
+  width: 50vw;
+}
 
 /* HEADER */
-header{
-    background-color: white;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: x-large;
-    font-weight: 700;
-    
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
-    
-    position: fixed;
-    top: 0;
-
-    width: 100vw;
-    height: max-content;
-    min-height: 10vh;
-    
-    border: none;
-    border-bottom: 2px solid #D9D9D9;
-    box-shadow: 0 5px #E6E6E6;
-    
-}
-header .title_page{
-    margin-left: 2%;
-}
-header img{
-    width: 50px;
-}
-
-header button{
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: medium;
-    /* white-space: nowrap; */
-
-    pointer-events: none;
-
-    background: #E98952;
-
-    border: none;
-    border-radius: 8px;
-
-    width: max-content;
-    height: max-content;
-    
-    padding: 0.6% 1%;
-    margin-right: 2%;
+header {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 10vh;
+  border: none;
+  border-bottom: 2px solid #D9D9D9;
+  -webkit-box-shadow: 0 5px #E6E6E6;
+          box-shadow: 0 5px #E6E6E6;
 }
 
-
-/* Section 1 - Nome do evento */
-section#name_event{
-    width: 45VW;
-    text-align: start;
-}
-section#name_event form{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
-    justify-content: start;
-    justify-items: center;
+header .title_page {
+  margin-left: 2%;
 }
 
-section#name_event form label{
-    align-self: flex-start;
-    margin: 5% 0 0 0;
+header img {
+  width: 50px;
 }
 
-input[type=text]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    border-bottom: 2px solid #333;
+header button {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: medium;
+  /* white-space: nowrap; */
+  cursor: pointer;
+  background: #E98952;
+  border: none;
+  border-radius: 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-width: 200px;
+  padding: 0.6% 1%;
+  margin-right: 2%;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
-input[type=text]:focus{
-    border: none;
+
+header button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-form i{
-    align-self: flex-end;
+section p {
+  margin-top: 2%;
 }
 
-
-input[type=image]{
-    border: 1.5px ridge #333;
-    border-radius: 15px;
-    padding: 15% 40%;
-    margin-top: 5%;
+section#name_event {
+  margin-top: 5%;
 }
 
-
-
-/* SECTION DATE */
-
-section#event_date{
-    background: url('../../img/background_sectionDate.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    min-height: 540px;
-
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-
-    text-align: start;
-
+section#name_event form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  justify-items: center;
 }
-section#event_date h1{
-    align-self: flex-start;
+
+section#name_event form label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5% 0 0 0;
 }
-section#event_date form{
-    display: grid;
-    grid-template-areas: "input1 . input2" ". . ." "input3 . input4";
-    grid-template-rows: auto 20% auto;
-    grid-template-columns: auto 20% auto;
+
+section#event_date {
+  background: url("../../img/background_sectionDate.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
 }
-section#event_date form input:nth-child(1){grid-area: input1;}
-section#event_date form input:nth-child(2){grid-area: input2;}
-section#event_date form input:nth-child(3){grid-area: input3;}
-section#event_date form input:nth-child(4){grid-area: input4;}
-section#event_date form{}
+
+section#event_date form {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "input1 . input2" ". . ." "input3 . input4";
+  -ms-grid-rows: auto 25% auto;
+      grid-template-rows: auto 25% auto;
+  -ms-grid-columns: auto 5% auto;
+      grid-template-columns: auto 5% auto;
+  padding-top: 5%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+section#event_date form input {
+  padding: 5% 3%;
+  border: none;
+  border-radius: 5px;
+}
+
+section#event_date form input:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input1;
+}
+
+section#event_date form input:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: input2;
+}
+
+section#event_date form input:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: input3;
+}
+
+section#event_date form input:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: input4;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+}
+
+input[type=text]:focus {
+  border: none;
+}
+
+input[type=image] {
+  border: 1.5px ridge #333;
+  border-radius: 15px;
+  padding: 15% 40%;
+  margin-top: 5%;
+}
+
+form i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+section#event_local {
+  margin: 0 0 10% 0;
+}
+
+section#event_local h1 {
+  margin-top: 5%;
+}
+
+section#event_local form {
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+/*# sourceMappingURL=create_event.css.map */

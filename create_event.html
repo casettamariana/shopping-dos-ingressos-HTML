@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,15 @@
     <link rel="shortcut icon" href="./assets/img/favIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/create_event/global.css">
 </head>
+
 <body>
-    <section id="focus_firstPage" class="content">
+    <section id="content">
         <header>
             <div class="title_page">Criar Evento</div>
             <img src="./assets/img/logo-100x100.png" alt="Logo Shopping dos Ingressos">
             <button>Publicar Evento</button>
         </header>
-        
+
         <section id="name_event">
             <h1>1. Nome do Evento</h1>
 
@@ -26,25 +28,47 @@
                 <i data-feather="check-circle"></i>
 
                 <label htmlFor="img_event">Imagem de Divulgação do Evento:</label>
-                <input type="image" src="./assets/img/upload-cloud.svg" alt="Adicione a imagem do seu evento" id="img_event"/>
+                <input type="image" src="./assets/img/upload-cloud.svg" alt="Adicione a imagem do seu evento"
+                    id="img_event" />
             </form>
         </section>
-    </section>
-    <section id="event_date" class="content">
-        <h1>2. Data do Evento</h1>
-        <p>Informe ao público a data de realização do seu evento.</p>
-        <form action="" method="post">
-            <input id="dateInicio" type="date">
-            <input id="dateInicio" type="time">
-            <input id="dateFim" type="date">
-            <input id="dateFim" type="time">
-        </form>
+        <section id="event_date">
+            <h1>2. Data do Evento</h1>
+            <p>Informe ao público a data de realização do seu evento.</p>
+            <form action="" method="post">
+                <input id="dateInicio" type="date">
+                <input id="dateInicio" type="time">
+                <input id="dateFim" type="date">
+                <input id="dateFim" type="time">
+            </form>
+        </section>
+        <section id="event_local">
+            <h1>3. Local do Evento</h1>
+            <p>Informe ao público o local de realização do seu evento.</p>
+            <form>
+                <label for="event_local"></label>
+                <input name="Local" id="event_local" list="event_local">
+            </form>
+            <datalist id="event_local">
+                <option>Goiânia</option>
+                <option>Aparecida de Goiânia</option>
+                <option>Anápolis</option>
+                <option>Rio Verde</option>
+                <option>Águas Lindas de Goiás</option>
+                <option>Luziânia</option>
+                <option>Valparaíso de Goiás</option>
+                <option>Trindade</option>
+                <option>Formosa</option>
+            </datalist>
+
+        </section>
     </section>
 
 
 
     <script>
         feather.replace()
-      </script>
+    </script>
 </body>
+
 </html>
