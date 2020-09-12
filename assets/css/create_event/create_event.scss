@@ -186,11 +186,56 @@ section#event_local{
     form{
         padding-top: 2%;
 
+        font-family: 'Roboto Mono', monospace;
+
+
         display: flex;
         flex-direction: column;
         align-content: center;
         align-items: stretch;
         justify-content: center;
         justify-items: center;
+        input{
+            margin-top: 4%;
+            border: 1.5px solid #333;
+            border-radius: 10px;
+            padding: 2% 2%;
+        }
     }
+
+
+    .online_event{
+        margin-top: 5%;
+        
+        border: none;
+        border-radius: 10px;
+        
+        flex-direction: column;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+        justify-items: center;
+
+        background: #F6F6F6;
+        form{
+            padding: 2% 5% 10% 5%;
+
+            
+            h1{
+                font-family: 'Roboto Mono', monospace;
+            }
+    
+            input{
+                background: transparent;
+                border: 1.5px solid #333;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+.algolia-places button {
+    display: none;
 }
