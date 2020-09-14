@@ -22,15 +22,11 @@
         <section id="name_event">
             <h1>1. Nome do Evento</h1>
 
-            <form action="" method="post">
-                <label htmlFor="name">Nome do Evento:</label>
-                <input type="text" name="nameEvent" id="name">
-                <i data-feather="check-circle"></i>
 
-                <label htmlFor="img_event">Imagem de Divulgação do Evento:</label>
-                <input type="image" src="./assets/img/upload-cloud.svg" alt="Adicione a imagem do seu evento"
-                    id="img_event" />
-            </form>
+            <div class="input__eventName">
+                <input type="text" name="nameEvent" id="name">
+                <i class="check-circle" data-feather="check-circle"></i>
+            </div>
         </section>
         <section id="event_date">
             <h1>2. Data do Evento</h1>
@@ -44,37 +40,36 @@
         </section>
         <section id="event_local">
             <h1>3. Local do Evento</h1>
-            <!-- <p></p> -->
-            <form id="form_typeEvent" action="action.php" method="post">
-                <label for="event_local">Informe ao público o local de realização do seu evento.</label>
-                <input name="Local" id="event_local" list="event_local2" onchange="javascript:mostraAlerta(this);">
-                <datalist id='event_local2' name='event_local' class='form-control' >
-                    <option value='Evento Online'>Evento Online</option>
-                    <option value='Outro tipo de evento'>Outro tipo de evento</option>
-                </datalist>
-            </form>
 
-            <div class="online_event" style="display: none;">
-                <form action="">
-                    <h1>Evento Online</h1>
-                    <input name="link__online_event" id="link__online_event" placeholder="Insira o link para acessar seu evento">
-                    <span>
-                        <input type="checkbox" name="noLinkEvent" id="noLink__online_event">
-                        <label for="noLink__online_event">Ainda não tenho link, inserir posteriormente.</label>
-                    </span>
-                </form>
-
-            </div>
-            <div class="physical_event" style="display: none;">
-                <form action="">
-                    <input type="search" id="address-input" placeholder="Onde será seu evento?" />
-                    
-                </form>
-                
-                <form action="" style="display: none;">
-                    <h1>Cadatrar novo endereço</h1>
-                    <input type="text">
-                </form>
+            <div class="event_local__content">
+                <div class="button__content">
+                    <div class="button__content_item">Evento Físico</div>    
+                    <div class="button__content_item">Evento Online</div>
+                </div>
+                <div class="container__content">
+                    <div class="online_event" style="display: flex;">
+                        <form action="">
+                            <h1>Evento Online</h1>
+                            <input name="link__online_event" id="link__online_event" placeholder="Insira o link para acessar seu evento">
+                            <span>
+                                <input type="checkbox" name="noLinkEvent" id="noLink__online_event">
+                                <label for="noLink__online_event">Ainda não tenho link, inserir posteriormente.</label>
+                            </span>
+                        </form>
+        
+                    </div>
+                    <div class="physical_event" style="display: none;">
+                        <form action="">
+                            <input type="search" id="address-input" placeholder="Onde será seu evento?" />
+                            
+                        </form>
+                        
+                        <form action="" style="display: none;">
+                            <h1>Cadatrar novo endereço</h1>
+                            <input type="text">
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         

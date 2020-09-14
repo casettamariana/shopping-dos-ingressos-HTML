@@ -1,0 +1,5 @@
+#perguntar se a pessoa quer usar um enderço preferido
+
+- fazer como tem na uber (barra de pesquisa, e abaixo o lugar dos favoritos)
+
+- estava pensando em fazer uma aplicação de exemplo com a api do google maps

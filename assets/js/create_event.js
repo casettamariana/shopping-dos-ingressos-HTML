@@ -4,7 +4,6 @@ const link__online_event = document.querySelector('#link__online_event');
 function mostraAlerta(element){
     const op_online = document.querySelector('.online_event');
     const op_physical = document.querySelector('.physical_event');
-    const typeEvent = document.querySelector('#form_typeEvent');
 
     if(op_online.style.display == 'flex' || op_physical.style.display == 'flex'){
         op_online.style.display = 'none';

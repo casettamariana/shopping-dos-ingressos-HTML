@@ -42,7 +42,9 @@
   text-align: start;
 }
 
-#content > section h1, #content > section p, #content > section form {
+#content > section h1,
+#content > section p,
+#content > section form {
   width: 50vw;
 }
 
@@ -122,31 +124,43 @@ section p {
 
 section#name_event {
   margin-top: 5%;
+  padding: 10% 0;
 }
 
-section#name_event form {
+section#name_event .input__eventName {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
+  font-family: 'Roboto Mono', monospace;
+  width: 50%;
+  border-bottom: 1.5px solid black;
 }
 
-section#name_event form label {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 5% 0 0 0;
+section#name_event .input__eventName input {
+  width: 100%;
+  padding: 4% 2% 1% 2%;
+  border: none;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+section#name_event .input__eventName input:focus {
+  padding: 4% 2% 1.5% 2%;
 }
 
 section#event_date {
@@ -204,15 +218,12 @@ input[type=text] {
   margin: 8px 0;
   border: none;
   border-bottom: 2px solid #333;
-}
-
-input[type=text]:focus {
-  border: none;
+  outline: none;
 }
 
 input[type=image] {
   border: 1.5px ridge #333;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15% 40%;
   margin-top: 5%;
 }
@@ -224,15 +235,6 @@ form i {
 
 section#event_local {
   margin: 0 0 10% 0;
-}
-
-section#event_local h1 {
-  margin-top: 5%;
-}
-
-section#event_local form {
-  padding-top: 2%;
-  font-family: 'Roboto Mono', monospace;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,22 +242,57 @@ section#event_local form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
 }
 
-section#event_local form input {
-  margin-top: 4%;
-  border: 1.5px solid #333;
-  border-radius: 10px;
-  padding: 2% 2%;
+section#event_local h1 {
+  margin-top: 5%;
+}
+
+section#event_local .button__content {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section#event_local .button__content .button__content_item {
+  width: 100%;
+  padding: 2% 0;
+  color: #1A3B57;
+  text-align: center;
+  font-weight: 700;
+  border: 1.5px solid #1A3B57;
+  -webkit-transition-duration: 1.05s;
+          transition-duration: 1.05s;
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+  cursor: pointer;
+}
+
+section#event_local .button__content .button__content_item:nth-child(1) {
+  border-right: transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+section#event_local .button__content .button__content_item:nth-child(2) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+section#event_local .button__content .button__content_item:hover {
+  background: #2d67966e;
 }
 
 section#event_local .online_event {
@@ -293,9 +330,5 @@ section#event_local .online_event form input {
   border-left: none;
   border-right: none;
   border-radius: 0;
-}
-
-.algolia-places button {
-  display: none;
 }
 /*# sourceMappingURL=create_event.css.map */
