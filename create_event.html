@@ -33,9 +33,9 @@
             <p>Informe ao público a data de realização do seu evento.</p>
             <form action="" method="post">
                 <input id="dateInicio" type="date">
-                <input id="dateInicio" type="time">
+                <input id="timeInicio" type="time">
                 <input id="dateFim" type="date">
-                <input id="dateFim" type="time">
+                <input id="timeFim" type="time">
             </form>
         </section>
         <section id="event_local">
@@ -43,11 +43,11 @@
 
             <div class="event_local__content">
                 <div class="button__content">
-                    <div class="button__content_item">Evento Físico</div>    
-                    <div class="button__content_item">Evento Online</div>
+                    <div id="button_eventPhysical" class="button__content_item enable__button_content_item" onclick="exibeTipoEvento(this)">Evento Físico</div>    
+                    <div id="button_eventOnline" class="button__content_item" onclick="exibeTipoEvento(this)">Evento Online</div>
                 </div>
                 <div class="container__content">
-                    <div class="online_event" style="display: flex;">
+                    <div class="online_event" style="display: none;">
                         <form action="">
                             <h1>Evento Online</h1>
                             <input name="link__online_event" id="link__online_event" placeholder="Insira o link para acessar seu evento">
@@ -58,7 +58,7 @@
                         </form>
         
                     </div>
-                    <div class="physical_event" style="display: none;">
+                    <div class="physical_event" style="display: flex;">
                         <form action="">
                             <input type="search" id="address-input" placeholder="Onde será seu evento?" />
                             

@@ -1,21 +1,39 @@
 const checkboxNoLink_event = document.querySelector('#noLink__online_event');
 const link__online_event = document.querySelector('#link__online_event');
 
-function mostraAlerta(element){
+function exibeTipoEvento(element){
     const op_online = document.querySelector('.online_event');
     const op_physical = document.querySelector('.physical_event');
+    const classStyle_buttonLocalEvent = 'enable__button_content_item';
 
-    if(op_online.style.display == 'flex' || op_physical.style.display == 'flex'){
-        op_online.style.display = 'none';
-        op_physical.style.display = 'none';
+    const btn_physical = document.querySelector('#button_eventPhysical');
+    const btn_online = document.querySelector('#button_eventOnline');
+
+    if(element.id == 'button_eventPhysical'){
+        displayNone(op_online);
+
+        disableClass(btn_online, classStyle_buttonLocalEvent);
+        enableClass(btn_physical, classStyle_buttonLocalEvent);
+        displayDiv(op_physical, 'flex');
+
+    } else if(element.id == 'button_eventOnline'){
+        displayNone(op_physical);
+
+
+        disableClass(btn_physical, classStyle_buttonLocalEvent);
+        enableClass(btn_online, classStyle_buttonLocalEvent);
+        displayDiv(op_online, 'flex');
     }
-
-    if(element.value == 'Evento Online'){
-        op_online.style.display = 'flex';
-    } else {
-        op_physical.style.display = 'flex';
-    } 
 }
+
+function displayNone(op){op.style.display = 'none';}
+function displayDiv(op, type='flex'){op.style.display = type;}
+
+function disableClass(div, classe){div.classList.remove(classe);}
+function enableClass(div, classe){div.classList.add(classe);}
+
+
+
 
 checkboxNoLink_event.addEventListener('click', () => {
     if(checkboxNoLink_event.checked){
@@ -28,6 +46,7 @@ checkboxNoLink_event.addEventListener('click', () => {
 
     }
 });
+
 link__online_event.addEventListener('pointerup', () => {
     if(link__online_event.disabled){
         alert('Uai locão, esqueceu que marcou que não tem link ainda????');
