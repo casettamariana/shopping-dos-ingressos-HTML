@@ -222,140 +222,160 @@ section#event_local {
         margin-top: 5%;
     }
 
-    .button__content{
-        margin-top: 5%;
-        
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        min-width: 25vw;
-        width: 48vw;
-
-        align-content: stretch;
-        align-items: stretch;
-        justify-content: stretch;
-        justify-items: stretch;
- 
-        .button__content_item{
-            width: 100%;
-            padding: 2% 0;
-
-            color: $azul_escuro;
-            text-align: center;
-            font-weight: 700;
-            
-            // background: #2d6796c7;
-            
-            transition-duration: 1.02s;
-            animation-duration: 1.02s;
-
-            cursor: pointer;
-        }
-        .enable__button_content_item{
-            color: white;
-            background-color: $azul_escuro;
-            border: 1.5px solid $azul_escuro;
-            border-top-left-radius: $border_radius;
-            border-top-right-radius: $border_radius;
-        }
-
-        
-    }
-
-    .container__content{
-
-        /* REVISAR */
-        
-        background: $azul_escuro;
-        padding: 10% 0;
-
+    .event_local__content{
         display: flex;
         flex-direction: column;
-        align-items: center;
-            align-content: center;
-            justify-content: center;
-            justify-items: center;
+        flex-wrap: nowrap;
 
-        .physical_event{
-            flex-direction: column;
-            flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: center;
 
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            justify-items: center;
-            .algolia-places{
-                display: flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
-                align-content: center !important;
-                justify-content: center !important;
-                justify-items: center !important;
-            }
-        }
+        justify-items: stretch;
+        justify-content: center;
 
-        input{
-            width: 60%;
-            justify-self: center;
-            align-self: center;
-        }
-        .online_event {
+        .button__content{
             margin-top: 5%;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
     
-            border: none;
-            border-radius: $border_radius;
+            min-width: 25vw;
+            width: 100%;
     
-            flex-direction: column;
-            align-content: space-around;
+            align-content: stretch;
             align-items: stretch;
-            justify-content: center;
+            justify-content: stretch;
             justify-items: stretch;
-    
-            background: #F6F6F6;
-    
-            width: 85%;
-    
-            form {
-
+     
+            .button__content_item{
                 width: 100%;
-                display: flex;
+                padding: 2% 0;
+    
+                color: $azul_escuro;
+                text-align: center;
+                font-weight: 700;
+                
+                // background: #2d6796c7;
+                
+                transition-duration: 1.02s;
+                animation-duration: 1.02s;
+    
+                cursor: pointer;
+            }
+            .enable__button_content_item{
+                color: white;
+                background-color: $azul_escuro;
+                border: 1.5px solid $azul_escuro;
+                border-top-left-radius: $border_radius;
+                border-top-right-radius: $border_radius;
+            }
+    
+        }
+        .border_eventPhysical{border-top-right-radius: $border_radius;}
+        .border_eventOnline{border-top-left-radius: $border_radius;}
+    
+        .container__content{
+    
+            /* REVISAR */
+            
+            background: $azul_escuro;
+            padding: 10% 0;
+            border-bottom-left-radius: $border_radius;
+            border-bottom-right-radius: $border_radius;
+            border-bottom: none;
+    
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            align-content: center;
+            
+            justify-content: center;
+            justify-items: center;
+    
+            .physical_event{
+                flex-direction: column;
+                flex-wrap: nowrap;
+    
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                .algolia-places{
+                    display: flex !important;
+                    flex-direction: row !important;
+                    align-items: center !important;
+                    align-content: center !important;
+                    justify-content: center !important;
+                    justify-items: center !important;
+                }
+            }
+    
+            input{
+                width: 60%;
+                justify-self: center;
+                align-self: center;
+            }
+            .online_event {
+                margin-top: 5%;
+        
+                border: none;
+                border-radius: $border_radius;
+        
                 flex-direction: column;
                 align-content: space-around;
                 align-items: stretch;
-                justify-content: stretch;
-                justify-items: center;
+                justify-content: center;
+                justify-items: stretch;
+        
+                background: #F6F6F6;
+        
+                width: 85%;
+        
+                form {
     
-                padding: 2% 5% 10% 5%;
-    
-    
-                h1 {
-                    font-family: 'Roboto Mono', monospace;
-                }
-    
-                input {
-                    width: 90%;
-                    background: transparent;
-                    border: 1.5px solid #333;
-                    border-top: none;
-                    border-left: none;
-                    border-right: none;
-                    border-radius: 0;
-                }
-                span{
+                    width: 100%;
                     display: flex;
-                    flex-direction: row;
-                    align-self: center;
-                    align-items: center;
-                    align-content: center;
-                    justify-content: center;
+                    flex-direction: column;
+                    align-content: space-around;
+                    align-items: stretch;
+                    justify-content: stretch;
                     justify-items: center;
-                    width: 80%;
-                    font-size: 10px;
+        
+                    padding: 2% 5% 10% 5%;
+        
+        
+                    h1 {
+                        font-family: 'Roboto Mono', monospace;
+                    }
+        
+                    input {
+                        width: 90%;
+                        background: transparent;
+                        border: 1.5px solid #333;
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                        border-radius: 0;
+                    }
+                    span{
+                        display: flex;
+                        flex-direction: row;
+                        align-self: center;
+                        align-items: center;
+                        align-content: center;
+                        justify-content: center;
+                        justify-items: center;
+                        width: 80%;
+                        font-size: 10px;
+                    }
                 }
             }
         }
+
     }
+
 }
 
 // Dispositivos extra small (telefones em modo retrato, com menos de 576px)

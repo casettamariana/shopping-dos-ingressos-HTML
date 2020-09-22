@@ -5,15 +5,22 @@ function exibeTipoEvento(element){
     const op_online = document.querySelector('.online_event');
     const op_physical = document.querySelector('.physical_event');
     const classStyle_buttonLocalEvent = 'enable__button_content_item';
+    const classStyle_border_eventPhysical = 'border_eventPhysical';
+    const classStyle_border_eventOnline = 'border_eventOnline';
 
     const btn_physical = document.querySelector('#button_eventPhysical');
     const btn_online = document.querySelector('#button_eventOnline');
+    const container_content = document.querySelector('.container__content');
 
     if(element.id == 'button_eventPhysical'){
         displayNone(op_online);
 
         disableClass(btn_online, classStyle_buttonLocalEvent);
+        disableClass(container_content, classStyle_border_eventOnline);
+
         enableClass(btn_physical, classStyle_buttonLocalEvent);
+        enableClass(container_content, classStyle_border_eventPhysical);
+
         displayDiv(op_physical, 'flex');
 
     } else if(element.id == 'button_eventOnline'){
@@ -21,7 +28,11 @@ function exibeTipoEvento(element){
 
 
         disableClass(btn_physical, classStyle_buttonLocalEvent);
+        disableClass(container_content, classStyle_border_eventPhysical);
+
         enableClass(btn_online, classStyle_buttonLocalEvent);
+        enableClass(container_content, classStyle_border_eventOnline);
+
         displayDiv(op_online, 'flex');
     }
 }
